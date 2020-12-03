@@ -244,7 +244,9 @@ class Affix extends React.Component {
     }
 
     _affixNodeRefHandler = ref => {
+        console.log(ref,1)
         this.affixNode = findDOMNode(ref);
+        console.log(this.affixNode)
     };
 
     _affixChildNodeRefHandler = ref => {
@@ -255,6 +257,7 @@ class Affix extends React.Component {
         const { affixMode } = this.state;
         const { prefix, className, style, children } = this.props;
         const state = this.state;
+        console.log(11123)
         const classNames = classnames({
             [`${prefix}affix`]: state.style,
             [`${prefix}affix-top`]: !state.style && affixMode.top,
